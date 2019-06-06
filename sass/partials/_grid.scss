@@ -38,6 +38,11 @@ $grid-spacing: 1.3%;
     }
 }
 
+[class^="col-"] [class^="col-"] {
+    background-color: $white;
+    color: $black;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: $break-small) {
     [class^="col-"] {
