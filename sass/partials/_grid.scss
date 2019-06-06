@@ -1,8 +1,7 @@
 // 12 Colummn Grid system
 
 // VARIABLES
-
-$grid-spacing: 0%;
+$grid-spacing: 1.3%;
 // Universal grid spacing through-out the responsive grid.
 // If we need to increase spacing we only need to amend in one place.
 
@@ -41,6 +40,7 @@ $grid-spacing: 0%;
 @media only screen and (max-width: $break-small) {
     [class^="col-"] {
         width: 100%;
+        // All columns will be 100% at 600px or less
     }
 }
 
@@ -48,9 +48,11 @@ $grid-spacing: 0%;
 @media only screen and (min-width: $break-small) {
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {
         width: 50%;
+        // From .col-1 to .col-6 will be 50% wide from 600px and up
     }
     .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
         width: 100%;
+        // From .col-7 to .col-12 will be 100% wide from 600px and up
     }
 } 
 
