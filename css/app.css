@@ -1,0 +1,122 @@
+/* 12 Column responsive grid */
+/* ============================
+Created and maintained by Jordan Nicholson.
+Website: http://jordangraphics.co.uk/
+Linkedin: https://www.linkedin.com/in/jordan-nicholson/
+============================ */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,900|Roboto:500&display=swap");
+.clearfix:after, .row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.row + .row {
+  margin-top: 1.3%; }
+
+[class^="col-"] {
+  float: left;
+  margin-right: 1.3%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  padding: 1em;
+  text-align: center; }
+  [class^="col-"]:last-of-type {
+    margin-right: 0%; }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  [class^="col-"] {
+    width: 100%; } }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {
+    width: 50%; }
+
+  .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    width: 100%; } }
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* COLUMNS */
+  .col-1 {
+    width: 7.1416666667%; }
+
+  .col-2 {
+    width: 15.5833333333%; }
+
+  .col-3 {
+    width: 24.025%; }
+
+  .col-4 {
+    width: 32.4666666667%; }
+
+  .col-5 {
+    width: 40.9083333333%; }
+
+  .col-6 {
+    width: 49.35%; }
+
+  .col-7 {
+    width: 57.7916666667%; }
+
+  .col-8 {
+    width: 66.2333333333%; }
+
+  .col-9 {
+    width: 74.675%; }
+
+  .col-10 {
+    width: 83.1166666667%; }
+
+  .col-11 {
+    width: 91.5583333333%; }
+
+  .col-12 {
+    width: 100%; } }
+/* BASE STYLES */
+/* Replace this line with the font you wish to @import */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-weight: 300; }
+
+.container {
+  max-width: 1620px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+a {
+  color: #2a2a2a; }
+  a:visited {
+    color: #2a2a2a; }
+
+#float-right {
+  float: right; }
+
+#float-left {
+  float: left; }
+
+#text-align--center {
+  text-align: center; }
+
+#text-align--left {
+  text-align: left; }
+
+#text-align--right {
+  text-align: right; }
+
+@media only screen and (max-width: 600px) {
+  .hidden {
+    display: none; } }
+
+/*# sourceMappingURL=app.css.map */
