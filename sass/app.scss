@@ -1,25 +1,19 @@
-@import "partials/bourbon/bourbon";
+/* 12 Column responsive grid */
 
+/* ============================
+Created and maintained by Jordan Nicholson.
+Website: http://jordangraphics.co.uk/
+Linkedin: https://www.linkedin.com/in/jordan-nicholson/
+============================ */
+
+// app.scss @imports all the individul scss files
+
+// Main scss files for the grid to work
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/grid";
 @import "partials/base";
 
+// Extra scss files to make the example look better
 @import "partials/typography";
-@import "partials/featured-image";
-
-@import "partials/blog-masterhead";
-@import "partials/blog-header";
-@import "partials/blog-posts";
-
-@import "partials/page-content";
-
-@import "partials/sidebar";
-@import "partials/pagination";
-
-@import "partials/social-icons";
-
-@import "partials/forms";
-@import "partials/buttons";
-
 @import "partials/footer";
