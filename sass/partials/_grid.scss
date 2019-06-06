@@ -1,0 +1,83 @@
+// 12 Colummn Grid system
+
+// VARIABLES
+
+$grid-spacing: 0%;
+// Universal grid spacing through-out the responsive grid.
+// If we need to increase spacing we only need to amend in one place.
+
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Adding the clearfix to the row and also some margin-top above each row
+.row {
+    @extend .clearfix;
+    // & + & just means that when one row is followed by another, 
+    // add some $grid-spacing to the top of the following one.    
+    & + & {
+        margin-top: $grid-spacing;
+    }
+}
+
+// Creating some base styles for all column, this saves writing this out for each column.
+[class^="col-"] {
+    float: left;
+    margin-right: $grid-spacing;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    &:last-of-type {
+        margin-right: 0%;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: $break-small) {
+    [class^="col-"] {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: $break-small) {
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {
+        width: 50%;
+    }
+    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        width: 100%;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $break-medium) {
+    
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: $break-large) {
+    
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: $break-xlarge) {
+    // Calculating the size of each column with the spacing taking into mind.
+    /* COLUMNS */
+    .col-1 { width: (100% / 12) - ($grid-spacing * 11 / 12); }
+    .col-2 { width: (100% / 6) - ($grid-spacing * 10 / 12); }
+    .col-3 { width: (100% / 4) - ($grid-spacing * 9 / 12); }
+    .col-4 { width: (100% / 3) - ($grid-spacing * 8 / 12); }
+    .col-5 { width: (100% / 2.4) - ($grid-spacing * 7 / 12); }
+    .col-6 { width: (100% / 2) - ($grid-spacing * 6 / 12); }
+    .col-7 { width: (100% / 1.714285714285714) - ($grid-spacing * 5 / 12); }
+    .col-8 { width: (100% / 1.5) - ($grid-spacing * 4 / 12); }
+    .col-9 { width: (100% / 1.333333333333333) - ($grid-spacing * 3 / 12); }
+    .col-10 { width: (100% / 1.2) - ($grid-spacing * 2 / 12); }
+    .col-11 { width: (100% / 1.090909090909091) - ($grid-spacing * 1 / 12); }
+    .col-12 { width: 100%; }
+}
